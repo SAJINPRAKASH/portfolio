@@ -63,7 +63,11 @@
     height: fit-content;
     margin-bottom: 2rem;
   }
-  .about-containers,
+  .about-containers{
+    flex-wrap: wrap;
+    flex-direction: column;
+
+  }
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;

@@ -267,6 +267,11 @@ section {
   position: relative;
 }
 
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -278,10 +283,6 @@ section {
   flex-direction: column;
 }
 
-.about-containers,
-.about-details-container {
-  display: flex;
-}
 
 .about-pic {
   border-radius: 2rem;
