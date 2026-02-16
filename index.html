@@ -1,358 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sajin Prakash</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Sajin Prakash</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <!-- <li><a href="#experience">Experience</a></li> -->
-          <li><a href="#works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Sajin Prakash</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <!-- <li><a href="#experience" onclick="toggleMenu()">Experience</a></li> -->
-          <li><a href="#works" onclick="toggleMenu()">Works</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Sajin Prakash profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Sajin Prakash</h1>
-        <p class="section__text__p2">Designer & Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https:www.linkedin.com/in/sajin-prakash-33b79b25b'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/SAJINPRAKASH'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ months <br />Intership in python Django</p>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Background Texture -->
+    <div class="background-layer">
+        <img src="assets/bg.png" alt="Background Texture">
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Top Metadata - Fixed or Sticky? 
+             Design has it fixed on top. We can keep it fixed but let content scroll behind.
+        -->
+        <header class="top-bar fixed-top">
+            <span class="meta-text">CREATIVE PORTFOLIO</span>
+            <div class="top-right">
+                <nav class="desktop-menu">
+                    <a href="index.html">Home</a>
+                    <a href="#services">Services</a>
+                    <!-- <a href="digital-products.html">Digital Products</a> -->
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <span class="meta-text" id="current-date">MAY 09, 2026</span>
+                <button class="menu-toggle">MENU</button>
             </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Computer Science<br /></p>
-              <p>flutter<br /></p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I may not have a PhD in coding and design, but I survived a three-month internship in Python Django development! I discovered that coding and design are like coffee and donuts—one fuels the other. Every bug became an opportunity to level up my skills, proving that even quirky code can look fabulous!
-            </p>
-          </div>
+        </header>
+
+        <!-- Navigation Overlay -->
+        <div class="nav-overlay">
+            <button class="close-menu-btn">✕</button>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <!-- <a href="digital-products.html" class="nav-link">Digital Products</a> -->
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="jobs">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Works</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <!-- <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
+
+        <!-- Section 1: Hero -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <!-- Huge Text Background -->
+                <h1 class="giant-text">PORT<span class="mobile-break"><br></span>FOLIO</h1>
+
+                <!-- Central Image -->
+                <div class="model-container">
+                    <img src="assets/model.png" alt="Fashion Model" class="model-image">
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
+            </div>
+
+            <!-- Bottom Metadata for Hero (Absolute within this section) -->
+            <footer class="bottom-bar hero-footer">
+                <div class="left-info">
+                    <p>Focused on branding, UI, and web experiences that turn complex ideas into clear, usable, and
+                        consistent digital products.</p>
+                    <div class="links">
+                        <a href="https://www.sajinprakash.online/" target="_blank" class="tab-link">sajinprakash.online</a>
+                        <a href="https://www.instagram.com/___saji__n_/">___saji__n_</a>
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
+                <div class="right-info">
+                    <span>Nadukani ,Kannur ,670142</span>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
+            </footer>
+        </section>
+
+        <!-- Section 2: About (Merged from about.html) -->
+        <section class="about-section" id="about">
+            <div class="about-content">
+                <!-- Left: Huge Typography -->
+                <div class="about-text-col">
+                    <h1 class="giant-text-about">
+                        <span class="small-hello">HELLO, I'M</span><br>
+                        <span class="text-red name-part">SAJIN</span><br>
+                        <span class="name-part">PRAKASH</span>
+                    </h1>
+
+                    <div class="about-subtitle">
+                        <span class="text-red">DESIGNER</span> AND DEVELOPER
+                    </div>
+
+                    <div class="about-description">
+                        <p>I DESIGN CLEAR, CONVERSION-<br>FOCUSED DIGITAL EXPERIENCES.</p>
+                    </div>
+
+                    <div class="about-footer-info">
+                        <div class="links">
+                            <!-- Changed link to scroll to top or just dummy -->
+                            <a href="https://www.sajinprakash.online/" target="_blank" class="tab-link">sajinprakash.online</a>
+                            <a href="mailto:sajinprakash.contact@gmail.com">@sajinprakash.contact@gmail.com</a>
+                        </div>
+                        <span>Nadukani ,Kannur ,670142</span>
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
+
+                <!-- Right: Image with Red Circle -->
+                <div class="about-image-col">
+                    <div class="image-wrapper">
+                        <!-- Red Circle Background -->
+                        <div class="red-circle"></div>
+                        <!-- Portrait -->
+                        <img src="assets/sajin_profile.png" alt="Sajin Prakash" class="profile-image">
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Education -->
+        <section class="education-section">
+            <div class="education-content">
+                <!-- Left: Image with Red Circle -->
+                <div class="education-image-col">
+                    <div class="edu-image-wrapper">
+                        <!-- Red Circle Background -->
+                        <div class="red-circle-left"></div>
+                        <!-- Student Portrait (Placeholder) -->
+                        <img src="assets/model.png" alt="Student Portrait" class="edu-profile-image">
+                    </div>
                 </div>
-              </article>
+
+                <!-- Right: Typography & List -->
+                <div class="education-text-col">
+                    <h1 class="giant-text-education">
+                        <span class="edu-my">MY</span><br>
+                        <span class="edu-title">EDUCATION</span>
+                    </h1>
+
+                    <div class="education-list">
+                        <div class="edu-item">
+                            <div class="edu-header">
+                                <span class="edu-school">BsC Computer Science</span>
+                                <span class="edu-year">(2021 - 2024)</span>
+                            </div>
+                            <p class="edu-desc">Completed a BSc in Computer Science at Taliparamba Arts and Science
+                                College, Taliparamba, Kannur, with core studies in programming, data structures,
+                                databases, software development, and web technologies, along with practical experience
+                                through labs and academic projects.</p>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-header">
+                                <span class="edu-school">Higher Secondary Education – Biology Science</span>
+                                <span class="edu-year">(2018 - 2020)</span>
+                            </div>
+                            <p class="edu-desc">Completed higher secondary education in Biology Science at
+                                Chapparapadavu Higher Secondary School, Chapparapadavu, with core subjects including
+                                Biology, Physics, Chemistry, and Mathematics, emphasizing both theoretical knowledge and
+                                practical learning.</p>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-header">
+                                <span class="edu-school">Secondary School Education</span>
+                                <span class="edu-year">(2018)</span>
+                            </div>
+                            <p class="edu-desc">Completed secondary school education at Chapparapadavu Higher Secondary
+                                School, Chapparapadavu, with a strong foundation in core subjects and overall academic
+                                development.</p>
+                        </div>
+                    </div>
+
+                    <div class="edu-footer-info">
+                        <!-- Email Icon -->
+                        <a href="mailto:sajinprakash.contact@gmail.com" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                        <!-- Instagram Icon -->
+                        <a href="https://www.instagram.com/___saji__n_" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <!-- LinkedIn Icon -->
+                        <a href="https://www.linkedin.com/in/sajin-prakash-33b79b25b" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div> -->
-          <div class="details-container">
-            <img id="grwmushlogo" src="./assets/grow_mush/grow mush.png" alt="Grow Mush Logo" >
-            <div class="article-container">
-              <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/grow_mush/profile-pic-prof.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+        </section>
+
+
+
+
+
+        <!-- Services Section (Redesigned) -->
+        <section id="services" class="services-section-v2">
+            <div class="services-header">
+                <h2 class="giant-text-services">Design Services<br>That Grow Your Brand</h2>
+                <p class="services-subtext">Full-service design solutions tailored to elevate and strengthen<br>your
+                    brand
+                    in the digital landscape.</p>
+            </div>
+
+            <div class="services-card-grid">
+                <!-- Card 1: Branding -->
+                <div class="service-card-v2">
+                    <span class="card-number">01</span>
+                    <div class="service-icon">
+                        <!-- Pencil / Ruler Icon -->
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                            <path d="M2 2l7.5 8.6"></path>
+                            <path d="M22 22l-5-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Branding Design</h3>
+                    <p>Complete brand identities designed for clarity, memorability, and market positioning.</p>
+                    <a href="#contact" class="explore-link">Explore &rarr;</a>
+                </div>
+
+                <!-- Card 2: Social Media -->
+                <div class="service-card-v2">
+                    <span class="card-number">02</span>
+                    <div class="service-icon">
+                        <!-- Heart / Chat Bubbles Icon -->
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Social Media Design</h3>
+                    <p>High-engagement visuals optimized for platform growth and audience attention.</p>
+                    <a href="#contact" class="explore-link">Explore &rarr;</a>
+                </div>
+
+                <!-- Card 3: UI / Website -->
+                <div class="service-card-v2">
+                    <span class="card-number">03</span>
+                    <div class="service-icon">
+                        <!-- Browser / Layout Icon -->
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h3>UI / Website Design</h3>
+                    <p>Conversion-focused interfaces combining usability, structure, and visual precision.</p>
+                    <a href="#contact" class="explore-link">Explore &rarr;</a>
+                </div>
+
+                <!-- Card 4: Creative Direction -->
+                <div class="service-card-v2">
+                    <span class="card-number">04</span>
+                    <div class="service-icon">
+                        <!-- Target / Strategy Icon -->
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                            <path d="M22 2l-7 7"></path>
+                        </svg>
+                    </div>
+                    <h3>Creative Direction</h3>
+                    <p>Strategic visual leadership ensuring consistency across all brand touchpoints.</p>
+                    <a href="#contact" class="explore-link">Explore &rarr;</a>
+                </div>
+            </div>
+
+            <div class="cta-container-v2">
+                <h3>Ready to launch your next project?</h3>
+                <p>Let's bring your vision to life with impactful design.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-red-glow">Start a Project</a>
+                    <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Portfolio Section (Dynamic) -->
+        <section id="portfolio" class="portfolio-section">
+            <p class="section__text__p1">Browse My Recent</p>
+            <h1 class="title">Work Gallery</h1>
+
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="photoshop">Photoshop</button>
+                <button class="filter-btn" data-filter="illustrator">Illustrator</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-container" id="gallery-grid">
+                <!-- Project Cards will be injected here by JS -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="btn-container" style="margin-top: 2rem; display: none;" id="load-more-container">
+                <button class="btn btn-color-2" id="load-more-btn">Load More</button>
+            </div>
+        </section>
+
+
+        <!-- Contact & Footer Section (Redesigned) -->
+        <section id="contact" class="contact-footer-section">
+            <div class="contact-bg-glow"></div>
+
+            <!-- CTA Content -->
+            <div class="cta-wrapper">
+                <h2 class="giant-text-contact">Let’s Build Something Exceptional</h2>
+                <p class="contact-subtext">Available for freelance projects, collaborations, and consulting.</p>
+
+                <div class="cta-buttons-row">
+                    <a href="mailto:sajinprakash.contact@gmail.com" class="btn btn-red-glow">Start a Project</a>
+                    <a href="mailto:sajinprakash.contact@gmail.com" class="btn btn-outline-pill">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Email Me
+                    </a>
+                </div>
+
+                <div class="social-icons-row">
+                    <!-- <a href="mailto:sajinprakash989@gmail.com" class="social-circle-icon"><svg width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg></a> -->
+                    <a href="https://wa.me/+919074894575" target="_blank" class="social-circle-icon"><svg width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg></a>
+                    <a href="https://www.linkedin.com/in/sajin-prakash-33b79b25b" target="_blank"
+                        class="social-circle-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg></a>
+                    <a href="" target="_blank" class="social-circle-icon"><svg width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a>
+                    <a href="#" target="_blank" class="social-circle-icon"><svg width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- Footer Grid -->
+            <div class="footer-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-col brand-col">
+                    <div class="brand-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" style="margin-right: 0.5rem;">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>Sajin Prakash</span>
+                    </div>
+                    <p class="footer-desc">Creative Designer & Developer specializing in branding, UI design, and
+                        digital experiences.</p>
+                    <div class="footer-contact-info">
+                        <a href="mailto:sajinprakash.contact@gmail.com" class="footer-contact-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            sajinprakash.contact@gmail.com
+                        </a>
+                        <span class="footer-contact-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Nadukani, Kannur, 670142
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Explore -->
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Follow Me -->
+                <div class="footer-col">
+                    <h3>Follow Me</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.linkedin.com/in/sajin-prakash-33b79b25b" target="_blank">LinkedIn</a>
+                        </li>
+                        <li><a href="https://www.instagram.com/no_body_fx_/" target="_blank">Instagram (Nobody)</a></li>
+                        <li><a href="https://www.instagram.com/no.bodylab?igsh=NXQ5N2R5eGRscHN0&utm_source=qr"
+                                target="_blank">Instagram (Lab)</a></li>
+                        <li><a href="https://github.com/SAJINPRAKASH" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.fiverr.com/sajinprakash" target="_blank">Fiverr</a></li>
+                        <li><a href="https://www.upwork.com/freelancers/~015d3adcca663efd1b?mp_source=share"
+                                target="_blank">Upwork</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Social Icons (Bottom Right) -->
+                <div class="footer-col social-col-right">
+                    <div class="social-row-mini">
+                        <a href="https://www.linkedin.com/in/sajin-prakash-33b79b25b" target="_blank"
+                            class="social-mini-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg></a>
+                        <a href="https://www.instagram.com/no_body_fx_/" target="_blank" class="social-mini-icon"><svg
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></a>
+                        <a href="https://github.com/SAJINPRAKASH" target="_blank" class="social-mini-icon"><svg
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright-bar">
+                <span>&copy; 2026 Sajin Prakash. All rights reserved.</span>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">•</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modal-image" src="" alt="Project Image">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Project Title</h2>
+                    <span id="modal-category" class="badge">Category</span>
+                    <p id="modal-description">Project description goes here...</p>
+                    <div id="modal-gallery" class="modal-gallery-grid">
+                        <!-- Additional project images -->
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="about-details-container">
-          
-          <div class="text-container">
-            <p>
-              Grow Mush is a branding project I developed for an oyster mushroom farmer who wanted to turn his fresh produce into a strong, marketable brand. I created a clean and memorable logo, modern product stickers, and essential brand assets that highlight freshness, purity, and trust. The visual identity gives Grow Mush a professional look and helps the farmer confidently present his mushrooms as a premium, recognizable product.
-            </p>
-          </div>
-          <br>
-          <button class="btn btn-color-1" onclick="window.location.href='growmush.html'">
-            View
-          </button>
-        </div>
-      </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="works">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Works</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/mywork16.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Photoshop</h2>
-            <div class="btn-container">
-              <!-- <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button> -->
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.location.href='photoshop.html'"
-              >
-                View
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/mywork17.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Illustrator</h2>
-            <div class="btn-container">
-              <!-- <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button> -->
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.location.href='illustrator.html'"
-              >
-              View
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/mywork18.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Web Development</h2>
-            <div class="btn-container">
-              <!-- <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-                
-              >
-                Github
-              </button> -->
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.location.href='web.html'"
-              >
-              View
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:sajinprakash989@gmail.com">sajinprakash989@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https:www.linkedin.com/in/sajin-prakash-33b79b25b">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <!-- <li><a href="#experience">Experience</a></li> -->
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Sajin Prakash. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <!-- Background circle -->
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" class="progress-path-bg" />
+            <!-- Progress circle -->
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" class="progress-path" />
+        </svg>
+        <span class="progress-text">0%</span>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
 </html>
