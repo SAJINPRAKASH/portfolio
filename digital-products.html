@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Products - Sajin Prakash</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Background Texture -->
+    <div class="background-layer">
+        <img src="assets/bg.png" alt="Background Texture">
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <header class="top-bar fixed-top">
+            <span class="meta-text">CREATIVE PORTFOLIO</span>
+            <div class="top-right">
+                <nav class="desktop-menu">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="digital-products.html">Digital Products</a>
+                    <a href="about.html">About</a>
+                    <a href="index.html#contact">Contact</a>
+                </nav>
+                <span class="meta-text" id="current-date">MAY 09, 2026</span>
+                <button class="menu-toggle">MENU</button>
+            </div>
+        </header>
+
+        <!-- Navigation Overlay -->
+        <div class="nav-overlay">
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="digital-products.html" class="nav-link">Digital Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Products Section -->
+        <section class="products-section" style="padding-top: 150px; min-height: 100vh;">
+            <p class="section__text__p1">Shop</p>
+            <h1 class="title">Digital Products</h1>
+
+            <div class="products-grid">
+                <!-- Coming Soon Cards -->
+                <div class="product-card coming-soon">
+                    <div class="product-placeholder">Coming Soon</div>
+                    <h3>Template Bundles</h3>
+                    <p>Premium design templates for your creative projects.</p>
+                </div>
+                <div class="product-card coming-soon">
+                    <div class="product-placeholder">Coming Soon</div>
+                    <h3>Mockup Packs</h3>
+                    <p>High-quality mockups to showcase your work.</p>
+                </div>
+                <div class="product-card coming-soon">
+                    <div class="product-placeholder">Coming Soon</div>
+                    <h3>Branding Kits</h3>
+                    <p>Complete branding assets for startups and creators.</p>
+                </div>
+            </div>
+
+            <!-- Email Signup -->
+            <div class="signup-section"
+                style="max-width: 600px; margin: 4rem auto; text-align: center; padding: 2rem; border: 1px solid rgba(255,255,255,0.1);">
+                <h3 style="color: var(--text-white); margin-bottom: 1rem;">Get Notified</h3>
+                <p style="color: #ccc; margin-bottom: 2rem;">Sign up to get updates when new products launch.</p>
+                <form id="product-signup" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <input type="email" placeholder="Your Email Address"
+                        style="padding: 1rem; background: transparent; border: 1px solid #333; color: white;" required>
+                    <button type="submit" class="btn btn-color-1">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Use Contact as Footer -->
+        <section id="contact">
+            <p class="section__text__p1">Get in Touch</p>
+            <h1 class="title">Contact Me</h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container contact-card" id="email-card">
+                    <div class="contact-header">
+                        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+                        <p>sajinprakash989@gmail.com</p>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" onsubmit="event.preventDefault(); sendMail();">
+                            <input type="text" id="sender-name" placeholder="Your Name" required>
+                            <input type="email" id="sender-email" placeholder="Your Email" required>
+                            <input type="text" id="sender-subject" placeholder="Subject" required>
+                            <textarea id="sender-message" placeholder="Your Message" rows="4" required></textarea>
+                            <button type="submit" class="btn btn-color-1">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-info-container contact-card"
+                    onclick="window.open('https://www.linkedin.com/in/sajin-prakash-33b79b25b', '_blank')">
+                    <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+                    <p>LinkedIn</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
