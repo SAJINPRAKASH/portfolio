@@ -2646,15 +2646,15 @@ section {
 
 /* Social Media specific grid */
 .social-media-grid {
-    column-count: 3;
-    column-gap: 1.5rem;
+    column-count: 6;
+    column-gap: 1rem;
     padding: 1rem 0;
 }
 .social-media-item {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     break-inside: avoid;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 16px;
     transform: translateZ(0); /* Safari fix */
 }
 .social-media-item img {
@@ -2683,9 +2683,21 @@ section {
    Responsive Service Portfolios
    ========================================= */
 
+@media (max-width: 1400px) {
+    .social-media-grid { 
+        column-count: 5; 
+    }
+}
+
+@media (max-width: 1100px) {
+    .social-media-grid { 
+        column-count: 4; 
+    }
+}
+
 @media (max-width: 900px) {
     .social-media-grid { 
-        column-count: 2; 
+        column-count: 3; 
     }
 }
 
@@ -2728,7 +2740,12 @@ section {
 
 @media (max-width: 600px) {
     .social-media-grid { 
-        column-count: 1; 
+        column-count: 2; 
+        column-gap: 0.5rem;
+    }
+    .social-media-item {
+        margin-bottom: 0.5rem;
+        border-radius: 16px;
     }
     .creative-card-inner {
         height: 300px;
